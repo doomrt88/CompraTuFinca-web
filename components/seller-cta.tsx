@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
+import Link from "next/link"
 
 const points = [
   "Video profesional en dron incluido",
@@ -41,16 +42,16 @@ export function SellerCTA() {
                 <Button
                   size="lg"
                   className="bg-white text-primary hover:bg-white/90"
-                >
-                  Publicar mi finca
-                </Button>
+                  nativeButton={false}
+                  render={<Link href="/vender-mi-finca">Publicar mi finca</Link>}
+                />
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white"
-                >
-                  Conocer más
-                </Button>
+                  nativeButton={false}
+                  render={<Link href="/contacto">Conocer más</Link>}
+                />
               </div>
             </div>
 
