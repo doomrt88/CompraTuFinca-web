@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { MapPin, Maximize, BedDouble, Video, ArrowRight } from "lucide-react"
 import { featuredProperties } from "@/lib/data"
+import Link from "next/link"
 
 export function FeaturedProperties() {
   return (
@@ -21,10 +22,17 @@ export function FeaturedProperties() {
               Colombia, cada una con su recorrido profesional en dron.
             </p>
           </div>
-          <Button variant="outline" className="gap-2 whitespace-nowrap">
-            Ver todas
-            <ArrowRight className="size-4" />
-          </Button>
+          <Button
+              variant="outline"
+              className="gap-2 whitespace-nowrap"
+              nativeButton={false}
+              render={
+                <Link href="/fincas">
+                  Ver todas
+                  <ArrowRight className="size-4" />
+                </Link>
+              }
+            />
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -81,9 +89,12 @@ export function FeaturedProperties() {
                       {p.price}
                     </p>
                   </div>
-                  <Button size="sm" variant="secondary">
-                    Ver finca
-                  </Button>
+                  <Button
+                    size="sm"
+                    variant="secondary"
+                    nativeButton={false}
+                    render={<Link href={`/fincas/${p.id}`}>Ver finca</Link>}
+                  />
                 </div>
               </div>
             </Card>

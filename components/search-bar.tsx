@@ -17,6 +17,8 @@ import {
   areaRanges,
 } from "@/lib/data"
 
+import Link from "next/link"
+
 function Field({
   label,
   placeholder,
@@ -65,13 +67,15 @@ export function SearchBar() {
         <Field label="Precio" placeholder="Rango de precio" options={priceRanges} />
         <Field label="Área" placeholder="Área (ha)" options={areaRanges} />
       </div>
-      <Button
-        size="lg"
-        className="mt-4 h-12 w-full gap-2 text-base font-semibold"
-      >
-        <Search className="size-5" />
-        Buscar propiedades
-      </Button>
+      <Link href="/fincas">
+        <Button
+          size="lg"
+          className="mt-4 h-12 w-full gap-2 text-base font-semibold"
+        >
+          <Search className="size-5" />
+          Buscar propiedades
+        </Button>
+      </Link>
     </div>
   )
 }
