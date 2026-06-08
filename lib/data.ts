@@ -133,18 +133,30 @@ export const featuredProperties: Property[] = [
 
 export const regions = [
   {
+    slug: "antioquia",
     name: "Antioquia",
+    departments: "Antioquia",
+    description: "Fincas recreativas, ganaderas y casas campestres cerca de Medellín, Rionegro, La Ceja y El Retiro.",
     properties: "320+ propiedades",
+    popularTypes: ["Recreativa", "Casa Campestre", "Ganadera"],
     image: "/region-antioquia.png",
   },
   {
+    slug: "eje-cafetero",
     name: "Eje Cafetero",
+    departments: "Quindío, Risaralda y Caldas",
+    description: "Fincas cafeteras, casas campestres y propiedades rurales rodeadas de paisaje natural.",
     properties: "245+ propiedades",
+    popularTypes: ["Cafetera", "Recreativa", "Agrícola"],
     image: "/region-eje-cafetero.png",
   },
   {
+    slug: "llanos",
     name: "Los Llanos",
+    departments: "Meta, Casanare y Arauca",
+    description: "Grandes extensiones rurales ideales para ganadería, agricultura e inversión productiva.",
     properties: "180+ propiedades",
+    popularTypes: ["Ganadera", "Agrícola", "Agroindustrial"],
     image: "/region-llanos.png",
   },
 ]

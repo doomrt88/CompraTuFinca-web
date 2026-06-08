@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { regions } from "@/lib/data"
 
@@ -20,9 +21,9 @@ export function PopularRegions() {
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {regions.map((r) => (
-            <a
-              key={r.name}
-              href="#propiedades"
+            <Link
+              key={r.slug}
+              href={`/regiones/${r.slug}`}
               className="group relative block aspect-[4/5] overflow-hidden rounded-2xl"
             >
               <img
@@ -40,8 +41,17 @@ export function PopularRegions() {
                   <ArrowUpRight className="size-5" />
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            href="/regiones"
+            className="text-sm font-semibold text-primary underline-offset-4 hover:underline"
+          >
+            Ver todas las regiones
+          </Link>
         </div>
       </div>
     </section>

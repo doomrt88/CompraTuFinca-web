@@ -6,11 +6,11 @@ import { Leaf, Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
-  { label: "Inicio", href: "#inicio" },
-  { label: "Propiedades", href: "#propiedades" },
-  { label: "Regiones", href: "#regiones" },
-  { label: "Vender", href: "#vender" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Inicio", href: "/" },
+  { label: "Propiedades", href: "/fincas" },
+  { label: "Regiones", href: "/regiones" },
+  { label: "Vender", href: "/vender-mi-finca" },
+  { label: "Contacto", href: "/contacto" },
 ]
 
 export function SiteHeader() {

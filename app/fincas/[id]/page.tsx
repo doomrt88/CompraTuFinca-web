@@ -16,6 +16,7 @@ import {
   PlayCircle,
   Video,
 } from "lucide-react"
+import { FileText, Download } from "lucide-react"
 
 type FarmDetailPageProps = {
   params: Promise<{
@@ -191,6 +192,26 @@ export default async function FarmDetailPage({ params }: FarmDetailPageProps) {
                     <p className="text-muted-foreground">Video</p>
                     <p className="font-semibold text-foreground">Recorrido con dron</p>
                   </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                    <span className="flex size-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <FileText className="size-5" />
+                    </span>
+
+                    <div className="flex-1">
+                        <p className="text-muted-foreground">Documentos</p>
+                        <p className="font-semibold text-foreground">
+                        Documentos asociados
+                        </p>
+                    </div>
+
+                    <a href="/documents/documentoDePrueba.pdf"
+                        download
+                        className="inline-flex size-9 items-center justify-center rounded-full border border-border text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+                        aria-label="Descargar documentos de la finca">
+                        <Download className="size-4" />
+                    </a>
                 </div>
               </div>
             </Card>
